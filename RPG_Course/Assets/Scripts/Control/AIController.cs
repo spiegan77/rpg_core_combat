@@ -14,6 +14,9 @@ namespace RPG.Control
         [SerializeField] float suspicionTime = 3f;
         [SerializeField] PatrolPath patrolPath;
         [SerializeField] float waypointTolerance = 1f;
+        [SerializeField] float waypointDwellTime = 3f;
+        [Range(0,1)]
+        [SerializeField] float patrolSpeedFraction = 0.2f;
 
         Fighter fighter;
         Health health;
@@ -22,6 +25,7 @@ namespace RPG.Control
 
         Vector3 guardPosition;
         float timeSinceLastSawPlayer = Mathf.Infinity;
+        float timeSinceArrivedAtWaypoint = Mathf.Infinity;
         int currentWayPointIndex = 0;
 
         private void Start()
@@ -40,7 +44,6 @@ namespace RPG.Control
 
             if (InAttackRangeOfPlayer() && fighter.CanAttack(player))
             {
-                timeSinceLastSawPlayer = 0;
                 AttackBehavior();
             }
             else if (timeSinceLastSawPlayer < suspicionTime) //!InAttackRangeOfPlayer && timeSinceLastSawPlayer < 5f
@@ -53,7 +56,13 @@ namespace RPG.Control
                 PatrolBehavior();
             }
 
+            UpdateTimers();
+        }
+
+        private void UpdateTimers()
+        {
             timeSinceLastSawPlayer += Time.deltaTime;
+            timeSinceArrivedAtWaypoint += Time.deltaTime;
         }
 
         private void PatrolBehavior()
@@ -63,11 +72,15 @@ namespace RPG.Control
             {
                 if (AtWayPoint())
                 {
+                    timeSinceArrivedAtWaypoint = 0;
                     CycleWaypoint();
                 }
                 nextPosition = GetCurrentWaypoint();
             }
-            mover.StartMoveAction(nextPosition);
+            if(timeSinceArrivedAtWaypoint > waypointDwellTime)
+            {
+                mover.StartMoveAction(nextPosition, patrolSpeedFraction);
+            }
         }
 
         private bool AtWayPoint()
@@ -93,6 +106,7 @@ namespace RPG.Control
 
         private void AttackBehavior()
         {
+            timeSinceLastSawPlayer = 0;
             fighter.Attack(player);
         }
 
