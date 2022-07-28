@@ -20,7 +20,6 @@ namespace RPG.Combat
             timeSinceLastAttack += Time.deltaTime;
 
             if (target == null) return;
-
             if (target.IsDead()) return;
 
             if (!GetIsInRange())
@@ -81,6 +80,7 @@ namespace RPG.Combat
         {
             StopAttack();
             target = null;
+            GetComponent<Mover>().Cancel();
         }
 
         private void StopAttack()
