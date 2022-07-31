@@ -448,6 +448,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4335338668724757734, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
+      propertyPath: source
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335338668724757734, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
+      propertyPath: destination
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335338668724757734, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
       propertyPath: sceneToLoad
       value: 0
       objectReference: {fileID: 0}
@@ -501,6 +509,79 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1086521488
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3066078809900983620, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.662
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147281426660167323, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147281426660167323, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 47.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147281426660167323, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147281426660167323, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -27.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147281426660167323, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147281426660167323, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147281426660167323, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147281426660167323, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147281426660167323, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147281426660167323, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4147281426660167323, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335338668724757734, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
+      propertyPath: source
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335338668724757734, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
+      propertyPath: destination
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335338668724757734, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
+      propertyPath: sceneToLoad
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7686664962761441870, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
+      propertyPath: m_Name
+      value: Portal (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fbac6ba3cee6fe74c8bc35944394d642, type: 3}
 --- !u!4 &1365009129 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6919376640049416518, guid: 9028b1bc29a70814392792d5d2c6a66b, type: 3}
